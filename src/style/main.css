@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+html {
+	font-size: 16px;
+	font-weight: normal;
+	color: #333;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+	width: 100vw;
+	max-width: 100%;
+	min-height: 100vh;
+}
+
+/* APP */
+.main--wrapper {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+/* FORM */
+.form--wrapper {
+	width: clamp(300px, 50%, 500px);
+	height: 100%;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.form--wrapper:last-child {
+	background: #f7f7f7;
+}
+
+.form--title {
+	width: fit-content;
+	padding: 0 12px;
+	margin: 0 auto;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-bottom: 40px;
+	text-align: center;
+	position: relative;
+}
+
+.form--title::before,
+.form--title::after {
+	content: "";
+	width: 100%;
+	height: 3px;
+	border-radius: 100px;
+	background: #333;
+	position: absolute;
+	left: 0;
+}
+
+.form--title::before {
+	bottom: -4px;
+}
+
+.form--title::after {
+	top: -4px;
+}
+
+.form--section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin-bottom: 20px;
+}
+
+.form--section label {
+	font-size: 0.8rem;
+	color: #666;
+	padding-left: 12px;
+}
+
+.form--section input {
+	height: 32px;
+	width: 100%;
+	border: 1px solid #333;
+	border-radius: 4px;
+	padding: 0 12px;
+	outline: none;
+}
+
+.form--section input.correct {
+	border: 2px solid #16a34a;
+}
+
+.form--section input.danger {
+	border: 2px solid #881337;
+}
+
+.form--submit {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+
+.form--submit button {
+	height: 32px;
+	width: fit-content;
+	padding: 0 20px;
+	background: #000;
+	border-radius: 4px;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #fff;
+}
+
+.form--error {
+	display: flex;
+	justify-content: center;
+	padding: 8px 0;
+	border-radius: 4px;
+	background: #881337;
+}
+
+.form--error p {
+	font-size: 0.8rem;
+	color: #fff;
+}
+
+.form--success {
+	display: flex;
+	justify-content: center;
+	padding: 8px 0;
+	border-radius: 4px;
+	background: #16a34a;
+}
+
+.form--success p {
+	font-size: 0.8rem;
+	color: #fff;
+}
